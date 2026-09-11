@@ -1,6 +1,6 @@
-import env from './env';
+import env from '../config/env.js';
 import emailVerificationTemplate from '../utils/email/emailVerificationTemplate.js'
-import transporter from './emailTransporter.js'
+import transporter from '../config/emailTransporter.js'
 
 
 const sendEmail = async (to, subject, username, email) => {
