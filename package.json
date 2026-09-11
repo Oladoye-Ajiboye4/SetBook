@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "cd config && npx drizzle-kit generate",
+    "migrate": "cd config && npx drizzle-kit migrate",
+    "push": "cd config && npx drizzle-kit push"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^1.0.0-rc.4",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "nodemailer": "^10.0.3",
+    "postgres": "^3.4.9",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^1.0.0-rc.4"
+  }
+}
