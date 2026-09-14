@@ -1,7 +1,7 @@
 {
   "version": "8",
   "dialect": "postgres",
-  "id": "58c7834b-42c8-4af4-8e0d-3f4f569e0f8b",
+  "id": "0414bbcf-6871-41c3-bf83-056b169ecbe7",
   "prevIds": [
     "00000000-0000-0000-0000-000000000000"
   ],
@@ -11,7 +11,7 @@
         "admin",
         "customer"
       ],
-      "name": "userRoles",
+      "name": "userPermission",
       "entityType": "enums",
       "schema": "public"
     },
@@ -74,7 +74,7 @@
       "table": "users"
     },
     {
-      "type": "userRoles",
+      "type": "userPermission",
       "typeSchema": "public",
       "notNull": true,
       "dimensions": 0,
