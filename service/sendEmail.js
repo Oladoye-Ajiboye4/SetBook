@@ -1,17 +1,17 @@
 import env from '../config/env.js';
 import emailVerificationTemplate from '../utils/email/emailVerificationTemplate.js'
 import transporter from '../config/emailTransporter.js'
+import nodemailer from 'nodemailer'
 
-
-const sendEmail = async (to, subject, username, email) => {
+const sendEmail = async (to, subject, username, emailVerificationToken) => {
     try {
-        const verificationLink = `${env.app_url}/verify-email?token=${emailVerificationToken}&email=${email}`;
+        const verificationLink = `${env.app_url}/verify-email/${emailVerificationToken}`;
         const info = await transporter.sendMail({
-            from: `'"SetBook - Admin" <${env.EMAIL_USER}>`, // sender address
+            from: `"SetBook - Admin" <${env.EMAIL_USER}>`, // sender address
             to: to, // list of recipients
             subject: subject, // subject line
             text: "Hello world?", // plain text body
-            html: emailVerificationTemplate(username, email, verificationLink), // HTML body
+            html: emailVerificationTemplate(username, verificationLink), // HTML body
         });
 
         console.log("Message sent: %s", info.messageId);

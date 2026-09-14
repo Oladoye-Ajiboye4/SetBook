@@ -1,4 +1,4 @@
-const emailVerificationTemplate = (username, email, verificationLink) => {
+const emailVerificationTemplate = (username, verificationLink) => {
   return `
     <html>
       <head>

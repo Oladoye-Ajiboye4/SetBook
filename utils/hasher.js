@@ -1,4 +1,6 @@
 import bcrypt from 'bcryptjs';
+import crypto from 'crypto';
+
 
 export const hashPassword = async (password) => {
   const saltRounds = await bcrypt.genSalt(10);
@@ -10,7 +12,7 @@ export const hashPassword = async (password) => {
 // hashPassword('Password123')
 
 
-export const comparePassword = async (password, hashedPassword) => {
+export const compareHash = async (password, hashedPassword) => {
   const isMatch = await bcrypt.compare(password, hashedPassword);
   return isMatch;
 };
